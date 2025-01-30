@@ -8,7 +8,7 @@ Plus, it requires minimal setup! ⚡
 ## Features ✨
 - **Simple to use**: Get started quickly without headaches. 🛠️
 - **Encryption support**: Currently supports Fernet, with more algorithms coming soon! 🔐
-- **Payload serialization**: Store and retrieve data objects directly in tokens—no extra work needed. 📦
+- **Payload serialization**: Store and retrieve data objects directly in tokens — no extra work needed. 📦
 
 ## Quickstart
 ```python
@@ -20,9 +20,9 @@ vault, app = Vault(), FastAPI()
 
 
 @app.get("/login")
-async def log_in() -> RedirectResponse:
+async def log_in(name: str) -> RedirectResponse:
     # Any dictionary, dataclass, or model is acceptable.
-    user_data = {"id": 1, "is_admin": True, "name": "John"}
+    user_data = {"id": 1, "is_admin": True, "name": name}
     response = RedirectResponse("/home", status_code=302)
     # Set the access token in cookies and return a prepared response.
     vault.set_access_token(response, payload=user_data)
