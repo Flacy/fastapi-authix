@@ -1,0 +1,45 @@
+site_name: "FastAPI Authix"
+repo_url: https://github.com/flacy/fastapi-authix
+repo_name: flacy/fastapi-authix
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/lock-check
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: "Switch to dark mode"
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: "Switch to light mode"
+  features:
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Usage: basic-usage.md
+#  - Advanced Usage: advanced-usage.md
+  - Serializers: serializers.md
+  - Ciphers: ciphers.md
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - admonition
+  - footnotes
+  - abbr
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
