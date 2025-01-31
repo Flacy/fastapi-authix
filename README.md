@@ -37,6 +37,8 @@ async def show_home_page(user_data: dict = Depends(vault.require_data)) -> JSONR
 
 ```
 
+For a better understanding of the library, visit the [documentation](https://flacy.github.io/fastapi-authix/).
+
 ## Contributing 🤝
 Want to contribute? Awesome! 🎉 Please open an issue first so we can discuss your ideas.
 Let’s build something great together! 💡
