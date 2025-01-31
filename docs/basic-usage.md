@@ -16,11 +16,11 @@ Let's explore its configuration options:
 The security layer responsible for data encryption and access token generation.
 By default, it uses the [Fernet](https://cryptography.io/en/latest/fernet/) encryption algorithm with a key that's
 **generated on each application startup**.
-You can choose from other [available ciphers](/ciphers) or implement your own.
+You can choose from other [available ciphers](ciphers.md) or implement your own.
 
 #### serializer
 The serializer converts objects into JSON format, which is then encoded into access tokens and reconstructed during decryption.
-The library [supports](/serializers) serialization of most common data models.
+The library [supports](serializers.md) serialization of most common data models.
 
 !!! Info
     By default, the serializer runs in `auto` mode, automatically detecting your data types.
