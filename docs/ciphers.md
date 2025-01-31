@@ -1,16 +1,13 @@
-В основе всего стоит шифрование.
-Библиотека подразумевает широкое использование различных алгоритмов (в будущем!)
-Но оставить библиотеку не допустив ни одного шифра, мы не могли.
-Поэтому по умолчанию вам доступен алгоритм Fernet,
-он идеален, если ваше приложение не требует сильных заморочек.
-
-Под капотом используется библиотека cryptography, а снаружи слой называемый Secure Layer.
-Это протокол (интерфейс) для взаимодействия с различными криптографическими функциями.
+The library expects broad use of various encryption algorithms in the future.
+However, we couldn't leave the library without at least one encryption method.
+By default, Fernet is available — it's ideal for applications without complex cryptographic requirements.
+Under the hood, we use the [cryptography](https://cryptography.io/en/latest/) library,
+with an external layer called **Secure Layer**.
+This is a protocol (interface) for interacting with cryptographic functions.
 
 ## Fernet
-Fernet - это симметричный метод шифрования,
-основанный на **AES** в режиме **CBC** с **HMAC** для обеспечения целости данных.
-Он безопасен, прост и поддерживает временные токены.
+Fernet is a symmetric encryption method based on **AES** in **CBC** mode with **HMAC** for data integrity.
+It's secure, simple, and supports time-limited tokens.
 
 ```python
 from cryptography.fernet import Fernet as Cipher
