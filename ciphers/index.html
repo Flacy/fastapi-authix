@@ -420,17 +420,15 @@
 
   <h1>Ciphers</h1>
 
-<p>В основе всего стоит шифрование.
-Библиотека подразумевает широкое использование различных алгоритмов (в будущем!)
-Но оставить библиотеку не допустив ни одного шифра, мы не могли.
-Поэтому по умолчанию вам доступен алгоритм Fernet,
-он идеален, если ваше приложение не требует сильных заморочек.</p>
-<p>Под капотом используется библиотека cryptography, а снаружи слой называемый Secure Layer.
-Это протокол (интерфейс) для взаимодействия с различными криптографическими функциями.</p>
+<p>The library expects broad use of various encryption algorithms in the future.
+However, we couldn't leave the library without at least one encryption method.
+By default, Fernet is available — it's ideal for applications without complex cryptographic requirements.
+Under the hood, we use the <a href="https://cryptography.io/en/latest/">cryptography</a> library,
+with an external layer called <strong>Secure Layer</strong>.
+This is a protocol (interface) for interacting with cryptographic functions.</p>
 <h2 id="fernet">Fernet</h2>
-<p>Fernet - это симметричный метод шифрования,
-основанный на <strong>AES</strong> в режиме <strong>CBC</strong> с <strong>HMAC</strong> для обеспечения целости данных.
-Он безопасен, прост и поддерживает временные токены.</p>
+<p>Fernet is a symmetric encryption method based on <strong>AES</strong> in <strong>CBC</strong> mode with <strong>HMAC</strong> for data integrity.
+It's secure, simple, and supports time-limited tokens.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">cryptography.fernet</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fernet</span> <span class="k">as</span> <span class="n">Cipher</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi_authix.security.fernet</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fernet</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
