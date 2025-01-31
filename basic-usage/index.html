@@ -634,10 +634,10 @@ It's ready for production use out of the box, though you'll likely want to custo
 <p>The security layer responsible for data encryption and access token generation.
 By default, it uses the <a href="https://cryptography.io/en/latest/fernet/">Fernet</a> encryption algorithm with a key that's
 <strong>generated on each application startup</strong>.
-You can choose from other <a href="/ciphers">available ciphers</a> or implement your own.</p>
+You can choose from other <a href="../ciphers/">available ciphers</a> or implement your own.</p>
 <h4 id="serializer">serializer</h4>
 <p>The serializer converts objects into JSON format, which is then encoded into access tokens and reconstructed during decryption.
-The library <a href="/serializers">supports</a> serialization of most common data models.</p>
+The library <a href="../serializers/">supports</a> serialization of most common data models.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>By default, the serializer runs in <code>auto</code> mode, automatically detecting your data types.
